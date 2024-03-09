@@ -1,0 +1,139 @@
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter/painting.dart';
+import 'package:flutter/widgets.dart';
+
+void main() {
+  runApp(App());
+}
+
+class App extends StatelessWidget{
+  const App({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        backgroundColor:Colors.lightGreen.shade100,
+        body: const Column(
+          children: [
+            SizedBox(
+              height:50,
+            ),
+            Row(
+              mainAxisAlignment:MainAxisAlignment.center ,
+              children: [
+                Row(
+                  children: [
+                    Icon(Icons.check,
+                        color: Colors.teal),
+                    Text(
+                      'To Do List',
+                      style: TextStyle(
+                        color:  Colors.teal,
+                        fontSize: 25,
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ),
+                  ], // children
+                ),
+              ], // children
+            ),
+            Padding(padding: EdgeInsets.fromLTRB(0,0,20,0),
+              child:Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  Text(
+                      '+',
+                      style: TextStyle(
+                        color: Colors.blueGrey,
+                        fontSize: 30,
+                      )
+                  ),
+                ],
+              ),
+            ),
+            Padding(padding: EdgeInsets.fromLTRB(20,0,0,0),
+              child:Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  SizedBox(
+                    height: 120,
+                  ),
+                  Text('오늘의 할 일',
+                    style: TextStyle(color:
+                    Colors.blueGrey,
+                      fontSize: 18,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                  SizedBox(width:240),
+                  Icon(Icons.check),
+                ],
+            ),
+            ),
+            Padding(padding: EdgeInsets.fromLTRB(20,0,0,0),
+                child:Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    SizedBox(
+                      height: 120,
+                    ),
+                    Text('일주일 간 해야할 일',
+                      style: TextStyle(color:
+                      Colors.blueGrey,
+                        fontSize: 18,
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+                    SizedBox(width:190),
+                    Icon(Icons.check),
+                  ],
+                ),
+            ),
+
+            Padding(padding: EdgeInsets.fromLTRB(20,0,0,0),
+              child:Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  SizedBox(
+                    height: 120,
+                  ),
+                  Text('이번 달의 할 일',
+                    style: TextStyle(color:
+                    Colors.blueGrey,
+                      fontSize: 18,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                  SizedBox(width:220),
+                  Icon(Icons.check),
+                ],
+              ),
+            ),
+            Padding(padding: EdgeInsets.fromLTRB(20,0,0,0),
+              child:Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  SizedBox(
+                    height: 120,
+                  ),
+                  Text('지금 할 일',
+                    style: TextStyle(color:
+                    Colors.blueGrey,
+                      fontSize: 18,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                  SizedBox(width:260),
+                  Icon(Icons.check),
+                ],
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
