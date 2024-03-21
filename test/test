@@ -1,0 +1,18 @@
+void main(){
+ runApp(App());
+} // App Widget이 앱을 시작할 때 뜨는 첫번쨰 Widget이므로 앱의 root임
+// root는 Material 디자인과 ios 디자인 중에 하나를 선택해야 함
+
+@override
+Widget build(BuildContext context){
+ return MaterialApp(
+  home: Scaffold( // 화면의 구성 및 구조에 관한 것들을 가지고 있는 Widget
+   appBar: AppBar(
+    title: Text('Hello flutter!'),
+   ), // AppBar
+   body: Center(
+    child: Text('Heelo world!'),
+   ), // Center
+  ), // Scaffold
+ ); // MaterialApp
+}
