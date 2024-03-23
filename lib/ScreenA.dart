@@ -57,10 +57,9 @@ class _TodoInputState extends State<TodoInput> {
         ),
         ElevatedButton(
           onPressed: () {
-            // 입력된 할 일을 처리하는 로직을 여기에 추가하세요
             String todo = _textEditingController.text;
             print('입력된 할 일: $todo');
-            // 예를 들어, 여기에서는 입력된 할 일을 출력합니다.
+
           },
           child: Text('추가'),
         ),
