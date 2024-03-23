@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'ScreenA.dart';
 
 void main() {
   runApp(const App());
@@ -31,15 +32,11 @@ class Home extends StatefulWidget{
   State<Home> createState() => HomePage();
 }
 
-class HomePage extends State<Home>{
-  /*int _counter = 0;
 
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
-*/
+
+
+class HomePage extends State<Home>{
+
   @override
 
   Widget build(BuildContext context){
@@ -48,35 +45,40 @@ class HomePage extends State<Home>{
       appBar: AppBar(
         centerTitle: true,
         leading: const Icon(Icons.calendar_today_sharp,
-        size: 30,),
-      title: const Text("To Do List",
-      style: TextStyle(
-        fontSize: 23,
-        fontWeight: FontWeight.w700,
-      ),
-      ),
+          size: 30,),
+        title: const Text("To Do List",
+          style: TextStyle(
+            fontSize: 23,
+            fontWeight: FontWeight.w700,
+          ),
+        ),
         actions: [
           IconButton(icon: const Icon(
             Icons.add,
             size: 30,
-          ),onPressed:(){},
+          ),onPressed:(){
+            Navigator.push(
+                context,
+                MaterialPageRoute(builder: (_)=>ScreenA())
+            );
+          },
           )
         ], // actions
       ),
       body: const Column(
         children: [
           ExpansionTile(title: Text("오늘의 할 일",
-          style: TextStyle(
-            fontSize: 20,
-            fontWeight: FontWeight.w300,
+            style: TextStyle(
+              fontSize: 20,
+              fontWeight: FontWeight.w300,
+            ),
           ),
           ),
-      ),
           ExpansionTile(title: Text("일주일 간 해야 할 일",
-          style: TextStyle(
-            fontSize: 20,
-            fontWeight: FontWeight.w300,
-          ),),),
+            style: TextStyle(
+              fontSize: 20,
+              fontWeight: FontWeight.w300,
+            ),),),
           ExpansionTile(title: Text(
             "이번 달의 할 일",
             style: TextStyle(
@@ -102,3 +104,6 @@ class HomePage extends State<Home>{
   }
 
 }
+
+
+
